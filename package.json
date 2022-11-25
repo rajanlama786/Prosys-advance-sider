@@ -1,0 +1,46 @@
+{
+  "name": "pt-simple-slider",
+  "version": "1.0.0",
+  "description": "=== Plugin Name === Contributors: (this should be a list of wordpress.org userid's) Donate link: https://prosysthemes.com Tags: comments, spam Requires at least: 3.0.1 Tested up to: 3.4 Stable tag: 4.3 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "keywords": [],
+  "author": "prosysthemes",
+  "license": "GPL-2.0-or-later",
+  "main": "blocks.js",
+  "scripts": {
+    "build:admin": "wp-scripts build src/settings.js",
+    "build:public": "wp-scripts build src/public.js",
+    "build:blocks": "wp-scripts build src/index.js",
+    "build": "npm-run-all --parallel build:admin build:public build:blocks",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "start:admin": "wp-scripts start src/settings.js",
+    "start:public": "wp-scripts start src/public.js",
+    "start:blocks": "wp-scripts start src/index.js",
+    "start": "npm-run-all --parallel start:admin start:public start:blocks",
+    "packages-update": "wp-scripts packages-update"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^23.5.0"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^9.5.0",
+    "@wordpress/blocks": "^11.12.0",
+    "@wordpress/components": "^19.15.0",
+    "@wordpress/i18n": "^4.13.0",
+    "@wordpress/icons": "^9.4.0",
+    "@wordpress/url": "^3.14.0",
+    "autoprefixer": "^10.4.7",
+    "jquery": "^3.6.1",
+    "lodash": "^4.17.21",
+    "npm-run-all": "^4.1.5",
+    "react-router-dom": "^6.3.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "stylis": "^4.1.1"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 1%"
+  ]
+}
