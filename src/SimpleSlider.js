@@ -66,7 +66,7 @@ export default class SimpleSlider extends Component {
           <h2> Single Item</h2>
           <Slider {...settings}>
             <div>
-              <SliderImage {...props} />
+              <SliderImage media={attributes.media} />
               <div className="ps-profile-image-square">
                 <div>1</div>
               </div>

@@ -20,15 +20,16 @@ import icons from "./icons";
 export default class SliderImage extends Component {
   constructor(props) {
     super(...arguments);
-    //console.log(this.props);
+    console.log(this.props);
   }
 
   render() {
     const { attributes, setAttributes } = this.props;
+    const media = this.props.media;
     const removeMedia = () => {
-      props.setAttributes({
-        mediaId: 0,
-        mediaUrl: "",
+      media[0].setAttributes({
+        id: 0,
+        Url: "",
       });
     };
 
@@ -39,12 +40,11 @@ export default class SliderImage extends Component {
       });
     };
 
-    const blockStyle = {
-      backgroundImage:
-        attributes.mediaUrl != ""
-          ? 'url("' + attributes.mediaUrl + '")'
-          : "none",
-    };
+    // const blockStyle = {
+    //   backgroundImage:
+    //     media[0].url != "" ? 'url("' + media[0].url + '")' : "none",
+    // };
+    console.log(media);
 
     return (
       <>
