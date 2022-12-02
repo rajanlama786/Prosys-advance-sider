@@ -26,8 +26,10 @@ export default class SliderImage extends Component {
   render() {
     const { attributes, setAttributes } = this.props;
     const media = this.props.media;
+    console.log("rajan");
+    console.log(media);
     const removeMedia = () => {
-      media[0].setAttributes({
+      media.setAttributes({
         id: 0,
         Url: "",
       });
@@ -40,11 +42,11 @@ export default class SliderImage extends Component {
       });
     };
 
-    // const blockStyle = {
-    //   backgroundImage:
-    //     media[0].url != "" ? 'url("' + media[0].url + '")' : "none",
-    // };
-    console.log(media);
+    // // const blockStyle = {
+    // //   backgroundImage:
+    // //     media.url != "" ? 'url("' + media.url + '")' : "none",
+    // // };
+    // console.log(media);
 
     return (
       <>
@@ -54,36 +56,35 @@ export default class SliderImage extends Component {
               <MediaUploadCheck>
                 <MediaUpload
                   onSelect={onSelectMedia}
-                  value={attributes.media[0].url}
+                  value={media.url}
                   allowedTypes={["image"]}
                   render={({ open }) => (
                     <Button
                       className={
-                        attributes.media[0].url == ""
+                        media.url == ""
                           ? "editor-post-featured-image__toggle"
                           : "editor-post-featured-image__preview"
                       }
                       onClick={open}
                     >
-                      {attributes.media[0].url == "" &&
-                        __("Choose an image", "awp")}
-                      {attributes.media[0].url != undefined && (
+                      {media.url == "" && __("Choose an image", "awp")}
+                      {media.url != undefined && (
                         <ResponsiveWrapper
                         // naturalWidth={props.media.media_details.width}
                         // naturalHeight={props.media.media_details.height}
                         >
-                          <img src={attributes.media[0].url} />
+                          <img src={media.url} />
                         </ResponsiveWrapper>
                       )}
                     </Button>
                   )}
                 />
               </MediaUploadCheck>
-              {attributes.media[0].url != "" && (
+              {media.url != "" && (
                 <MediaUploadCheck>
                   <MediaUpload
                     title={__("Replace image", "awp")}
-                    value={attributes.media[0].url}
+                    value={media.url}
                     onSelect={onSelectMedia}
                     allowedTypes={["image"]}
                     render={({ open }) => (
@@ -94,7 +95,7 @@ export default class SliderImage extends Component {
                   />
                 </MediaUploadCheck>
               )}
-              {attributes.media[0].url != "" && (
+              {media.url != "" && (
                 <MediaUploadCheck>
                   <Button onClick={removeMedia} isLink isDestructive>
                     {__("Remove image", "awp")}

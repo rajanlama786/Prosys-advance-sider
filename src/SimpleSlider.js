@@ -38,14 +38,9 @@ function sliderselectImage(value) {
 
 export default class SimpleSlider extends Component {
   render() {
-    // // console.log(blockProps);
-    // const blockProps = useBlockProps();
     const { attributes, setAttributes } = this.props;
     const media = attributes.media;
     const res_media = {};
-
-    //const attributes = metadata.attributes;
-    //const { imgUrl } = attributes;
 
     const settings = {
       dots: true,
@@ -54,10 +49,6 @@ export default class SimpleSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
-    // console.log("raja");
-    // console.log(attributes);
-    // console.log("rani");
-
     const props = this.props;
 
     return (
@@ -65,12 +56,16 @@ export default class SimpleSlider extends Component {
         <div>
           <h2> Single Item</h2>
           <Slider {...settings}>
-            <div>
-              <SliderImage media={attributes.media} />
-              <div className="ps-profile-image-square">
-                <div>1</div>
-              </div>
-            </div>
+            {media.map((mediaImg, index) => {
+              return (
+                <div key={index}>
+                  <SliderImage media={mediaImg} />
+                  <div className="ps-profile-image-square">
+                    <div>1</div>
+                  </div>
+                </div>
+              );
+            })}
           </Slider>
         </div>
       </>

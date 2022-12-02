@@ -15,14 +15,21 @@
       "media": {
         "type": "array",
         "default": [{
-          "id": 0,
-          "title": "",
-          "filename": "",
-          "url": "#",
+          "id": 1,
+          "title": "Rajan",
+          "filename": "rajna",
+          "url": "http://cpmblock.loc/wp-content/uploads/2022/11/Screenshot-1.png",
+          "updated": ""
+        },
+        {
+          "id":2,
+          "title": "ritee",
+          "filename": "ritee",
+          "url": "http://cpmblock.loc/wp-content/uploads/2022/11/Screenshot-1.png",
           "updated": ""
         }]
       },
-      "uniqueID": {
+      "mediaID": {
         "type": "string",
         "default": ""
       },
