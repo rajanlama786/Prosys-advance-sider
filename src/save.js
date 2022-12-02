@@ -13,11 +13,11 @@ export default function save({ attributes }) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  // {...settings}
 
   return (
     <>
       <div {...blockProps}>
+        <img className="classhere" src={attributes.imgUrl} />
         {__("Hello World, step 1 (from the editor).", "gutenberg-examples")}
         return (
         <div>
