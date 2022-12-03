@@ -5,3 +5,56 @@ img.ps-profile-avatar {
 .wp-block-pt-simple-slider-pt-simple-slider img {
     max-width: 100%;
 }
+
+.ps-profile-image-wrap .editor-post-featured-image__toggle{
+    height: 300px;
+}
+
+.ps-profile-image-wrap .editor-post-featured-image .components-responsive-wrapper__content {
+    /* max-width: 100%; */
+    width: auto;
+    /* width: auto; */
+    height: 300px;
+}
+
+.ps-profile-image-wrap button.components-button.is-link.is-destructive {
+    background: #ff3030;
+    color: #000;
+    text-decoration: none;
+    /* font-size: 30px; */
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
+.ps-profile-image-wrap button:hover.components-button.is-link.is-destructive {
+    background: #800101;
+    color: rgb(255, 255, 255);
+}
+
+.ps-profile-image-wrap .editor-post-featured-image {
+    position: relative;
+}
+
+.ps-profile-image-wrap button.components-button.is-secondary {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    background: #fff;
+}
+
+.ps-profile-image-wrap .editor-post-featured-image__preview{
+    padding: 0;
+}
+
+.ps-profile-image-wrap button.components-button.is-link.is-destructive {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.ps-slider-text {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    background: #cdcdcd;
+}

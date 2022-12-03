@@ -12,33 +12,48 @@
     "editorStyle": "file:./index.css",
     "style": "file:./style-index.css",
     "attributes": {
-      "media": {
+      "slides": {
         "type": "array",
         "default": [{
-          "id": 1,
-          "title": "Rajan",
-          "filename": "rajna",
-          "url": "http://cpmblock.loc/wp-content/uploads/2022/11/Screenshot-1.png",
-          "updated": ""
-        },
-        {
-          "id":2,
-          "title": "ritee",
-          "filename": "ritee",
-          "url": "http://cpmblock.loc/wp-content/uploads/2022/11/Screenshot-1.png",
-          "updated": ""
+          "slideID": {
+            "type": "number",
+            "default": ""
+          },
+          "mediaID": {
+            "type": "number",
+            "default": ""
+          },
+          "mediaUrl": {
+            "type": "string",
+            "default": "#"
+          },
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "content": {
+            "type": "string",
+            "default": ""
+          },
+          "buttonText": {
+            "type": "string",
+            "default": "Read More"
+          },
+          "buttonUrl": {
+            "type": "string",
+            "default": "#"
+          },
+          "buttonText2": {
+            "type": "string",
+            "default": "Read More"
+          },
+          "buttonUrl2": {
+            "type": "string",
+            "default": "#"
+          }
         }]
-      },
-      "mediaID": {
-        "type": "string",
-        "default": ""
-      },
-      "imgUrl": {
-        "type": "string",
-        "default": "kaka"
       }
-   
-  },
+    },
   "usesContext": [
     "postId",
     "queryId"

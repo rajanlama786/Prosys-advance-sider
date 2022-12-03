@@ -13,8 +13,6 @@ import {
   MediaUploadCheck,
 } from "@wordpress/block-editor";
 
-import AvatarColumn from "./slide";
-
 /**
  * Import block.json
  */
@@ -33,8 +31,6 @@ const Edit = (props) => {
   return (
     <>
       <div {...blockProps}>
-        {__("Hello World, step 1 (from the editor).", "gutenberg-examples")}
-        {/* <AvatarColumn {...props} /> */}
         <SimpleSlider {...props} />
       </div>
     </>

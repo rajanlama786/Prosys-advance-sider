@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "pt-simple-slider/pt-simple-slider",
+    "version": "0.1.0",
+    "title": "Simple Slider",
+    "category": "widgets",
+    "icon": "smiley",
+    "description": "Example static block scaffolded with Create Block tool.",
+    "textdomain": "pt-simple-slider",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "attributes": {
+      "media": {
+        "type": "array",
+        "default": [{
+          "id": 1,
+          "title": "Rajan",
+          "filename": "rajna",
+          "url": "http://cpmblock.loc/wp-content/uploads/2022/11/Screenshot-1.png",
+          "updated": ""
+        },
+        {
+          "id":2,
+          "title": "ritee",
+          "filename": "ritee",
+          "url": "http://cpmblock.loc/wp-content/uploads/2022/11/Screenshot-1.png",
+          "updated": ""
+        }]
+      },
+      "mediaID": {
+        "type": "string",
+        "default": ""
+      },
+      "imgUrl": {
+        "type": "string",
+        "default": "kaka"
+      }
+   
+  },
+  "usesContext": [
+    "postId",
+    "queryId"
+  ],
+  "supports": {
+    "anchor": true
+  }
+}
